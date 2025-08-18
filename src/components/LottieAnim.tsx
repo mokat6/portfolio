@@ -2,22 +2,22 @@
 import { useEffect, useRef, useState } from "react";
 import lottie, { AnimationItem } from "lottie-web";
 import animationData from "../../public/ae.json";
+import { useTheme } from "@/context/theme/theme-context";
 
 export const LottieAnim = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<AnimationItem | null>(null);
-  const [color, setColor] = useState<[number, number, number, number]>([1, 1, 1, 1]); // default white
+  const { theme } = useTheme();
+  const hasPlayedOnce = useRef(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Clone JSON to avoid mutation
     const clonedData = JSON.parse(JSON.stringify(animationData));
 
-    // Apply initial color
+    const color = theme === "light" ? [0, 0, 0, 1] : [1, 1, 1, 1];
     if (clonedData.layers[7]?.ef?.[0]?.ef?.[0].v.k) clonedData.layers[7].ef[0].ef[0].v.k = color;
 
-    // Destroy previous anim if it exists
     if (animRef.current) {
       animRef.current.destroy();
     }
@@ -26,28 +26,23 @@ export const LottieAnim = () => {
       container: containerRef.current,
       renderer: "svg",
       loop: false,
-      autoplay: true,
+      autoplay: !hasPlayedOnce.current,
       animationData: clonedData,
     });
-  }, [color]); // rerun when color changes
+
+    if (!hasPlayedOnce.current) hasPlayedOnce.current = true;
+  }, [theme]);
 
   const replay = () => {
     if (animRef.current && animRef.current.isPaused) {
-      animRef.current.stop(); // reset to frame 0
-      animRef.current.play(); // play once
+      animRef.current.stop();
+      animRef.current.play();
     }
   };
 
   return (
     <div>
       <div ref={containerRef} onMouseEnter={replay} className="w-64 h-64" />
-
-      <div className="flex gap-2 mt-4">
-        <button onClick={() => setColor([1, 0, 0, 1])}>Red</button>
-        <button onClick={() => setColor([0, 1, 0, 1])}>Green</button>
-        <button onClick={() => setColor([0, 0, 1, 1])}>Blue</button>
-        <button onClick={() => setColor([1, 1, 1, 1])}>White</button>
-      </div>
     </div>
   );
 };

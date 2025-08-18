@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ThemeSwitch } from "./SwitchTheme";
 
 export const Side = () => {
   return (
@@ -34,6 +35,7 @@ export const Side = () => {
       </div>
       <div>15688779631</div>
       <div>mail@mail.com</div>
+      <ThemeSwitch />
     </div>
   );
 };
