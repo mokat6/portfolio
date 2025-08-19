@@ -3,13 +3,13 @@ import { useEffect, useState } from "react";
 import { ThemeContext, type Theme } from "./theme-context";
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored) return stored;
+  const [theme, setTheme] = useState<Theme>("light"); // safe default
 
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDark ? "dark" : "light";
-  });
+  // After hydration, sync state with the actual <html class="..."> that script set
+  useEffect(() => {
+    const current = document.documentElement.classList.contains("dark") ? "dark" : "light";
+    setTheme(current);
+  }, []);
 
   useEffect(() => {
     document.documentElement.classList.remove("light", "dark");

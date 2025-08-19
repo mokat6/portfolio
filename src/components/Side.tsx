@@ -13,7 +13,7 @@ export const Side = () => {
         height={140}
         className="rounded-full"
       />
-      <p className="text-xl">{`<Modestas.Katinas />`}</p>
+      <p className="text-xl">{`<Stilla.Gorilla />`}</p>
 
       <div className="flex items-center">
         <FaLinkedin className="text-4xl" />

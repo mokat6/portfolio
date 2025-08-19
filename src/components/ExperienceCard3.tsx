@@ -1,8 +1,8 @@
-import { LottieAnim } from "./LottieAnim";
+// import { LottieAnim } from "./LottieAnim";
 import { SiTypescript, SiTailwindcss } from "@icons-pack/react-simple-icons";
 import SpringBoot from "../../public/tech-stack/spring boot.svg";
-import Bootstrap from "../../public/tech-stack/bootstrap.svg";
-import Java from "../../public/tech-stack/java.svg";
+// import Bootstrap from "../../public/tech-stack/bootstrap.svg";
+// import Java from "../../public/tech-stack/java.svg";
 import Radix from "../../public/tech-stack/radix.png";
 import Image from "next/image";
 import { Tooltip } from "./Tooltip";
@@ -10,6 +10,7 @@ import { SiSpringboot } from "@icons-pack/react-simple-icons";
 import { SiJavascript } from "@icons-pack/react-simple-icons";
 import { SiBootstrap } from "@icons-pack/react-simple-icons";
 import { SiReact } from "@icons-pack/react-simple-icons";
+import { Bootstrap, Java } from "@/lib/svgs";
 
 const WORK: WorkType[] = [
   {
@@ -55,13 +56,10 @@ export const ExperienceCard3 = () => {
               <SiReact size={32} color="#61DAFB" title="React" />
             </Tooltip>
             <Tooltip message="Bootstrap">
-              <Image src={Bootstrap} alt="Spring Boot" width={32} height={32} />
+              <Bootstrap />
             </Tooltip>
             <Tooltip message="Java">
-              <Image src={Java} alt="Java" width={32} height={32} />
-            </Tooltip>
-            <Tooltip message="Radix primitives">
-              <SiBootstrap size={32} color="#7952B3" title="Bootstrap" />
+              <Java />
             </Tooltip>
           </div>
         </div>

@@ -1,13 +1,16 @@
-import { LottieAnim } from "./LottieAnim";
+// import { LottieAnim } from "./LottieAnim";
 import { SiTypescript, SiTailwindcss } from "@icons-pack/react-simple-icons";
-import Tanstack from "../../public/tech-stack/tanstack.png";
-import Vite from "../../public/tech-stack/vite.svg";
-import Radix from "../../public/tech-stack/radix.png";
-import Dotnet from "../../public/tech-stack/NET_Core_Logo.svg";
+// import Tanstack from "../../public/tech-stack/tanstack.png";
+// import Vite from "../../public/tech-stack/vite.svg";
+// import Radix from "../../public/tech-stack/radix.png";
+// import Dotnet from "../../public/tech-stack/NET_Core_Logo.svg";
 import Image from "next/image";
 import { SiReact } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "./Tooltip";
 import { SiSwagger } from "@icons-pack/react-simple-icons";
+import { Dotnet, Radix, Tanstack, Vite } from "@/lib/svgs";
+import { LottieAnim2 } from "./Lottie2";
+import { Suspense } from "react";
 
 const WORK: WorkType[] = [
   {
@@ -58,13 +61,16 @@ export const ExperienceCard = () => {
               <SiTailwindcss size={32} color="#06B6D4" />
             </Tooltip>
             <Tooltip message="Tanstack Table, Tanstack Query, Tanstack Virtual">
-              <Image src={Tanstack} alt="TanStack" width={32} height={32} />
+              <Tanstack />
+              {/* <Image src={Tanstack} alt="TanStack" width={32} height={32} /> */}
             </Tooltip>
             <Tooltip message="Radix primitives">
-              <Image src={Radix} alt="Radix" width={32} height={32} />
+              {/* <Image src={Radix} alt="Radix" width={32} height={32} /> */}
+              <Radix />
             </Tooltip>
             <Tooltip message="Vite">
-              <Image src={Vite} alt="Vite" width={32} height={32} />
+              {/* <Image src={Vite} alt="Vite" width={32} height={32} /> */}
+              <Vite />
             </Tooltip>
             <Tooltip message="React">
               <SiReact size={32} color="#61DAFB" title="React" />
@@ -73,7 +79,8 @@ export const ExperienceCard = () => {
               <SiSwagger size={32} color="#85EA2D" title="Swagger" />
             </Tooltip>
             <Tooltip message="asp .NET core">
-              <Image src={Dotnet} alt="Vite" width={32} height={32} />
+              {/* <Image src={Dotnet} alt="Vite" width={32} height={32} /> */}
+              <Dotnet />
             </Tooltip>
           </div>
           <div className="w-80">
@@ -81,7 +88,9 @@ export const ExperienceCard = () => {
             Swagger generated api sdk
           </div>
         </div>
-        <LottieAnim />
+        {/* <LottieAnim /> */}
+
+        <LottieAnim2 />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import { LottieAnim } from "./LottieAnim";
 import { SiTypescript, SiTailwindcss } from "@icons-pack/react-simple-icons";
 import Tanstack from "../../public/tech-stack/tanstack.png";
 import Radix from "../../public/tech-stack/radix.png";
