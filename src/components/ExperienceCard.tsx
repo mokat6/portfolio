@@ -57,14 +57,11 @@ export const ExperienceCard = () => {
             </Tooltip>
             <Tooltip message="Tanstack Table, Tanstack Query, Tanstack Virtual">
               <Tanstack />
-              {/* <Image src={Tanstack} alt="TanStack" width={32} height={32} /> */}
             </Tooltip>
             <Tooltip message="Radix primitives">
-              {/* <Image src={Radix} alt="Radix" width={32} height={32} /> */}
               <Radix />
             </Tooltip>
             <Tooltip message="Vite">
-              {/* <Image src={Vite} alt="Vite" width={32} height={32} /> */}
               <Vite />
             </Tooltip>
             <Tooltip message="React">
@@ -76,10 +73,8 @@ export const ExperienceCard = () => {
               <span className="text-gray-700 bg-[color:#8bf62a]  rounded-full">
                 <SiSwagger size={32} />
               </span>
-              {/* <SiSwagger size={32} className="text-green-400 dark:text-green-700" /> */}
             </Tooltip>
             <Tooltip message="asp .NET core">
-              {/* <Image src={Dotnet} alt="Vite" width={32} height={32} /> */}
               <Dotnet />
             </Tooltip>
           </div>
