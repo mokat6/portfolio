@@ -39,10 +39,9 @@ export function Radix() {
       viewBox="0 0 24 24"
       height={32}
       width={32}
-      style={{ background: "#000", paddingLeft: 7 }}
+      style={{ paddingLeft: 7 }}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      className="text-white"
     >
       <path d="M7 23C3.13401 23 0 19.6422 0 15.5C0 11.3578 3.13401 8 7 8V23Z" />
       <path d="M7 0H0V7H7V0Z" />

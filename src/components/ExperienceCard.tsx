@@ -4,97 +4,128 @@ import { Tooltip } from "./Tooltip";
 import { SiSwagger } from "@icons-pack/react-simple-icons";
 import { Dotnet, Radix, Tanstack, Vite } from "@/lib/svgs";
 import { LottieAnim } from "./LottieAnim";
+import { PropsWithChildren } from "react";
 
 const WORK: WorkType[] = [
   {
-    text: "Figma",
-    url: "https://www.figma.com/design/FFE2IpYIgB8X1EzHPi2wMb/Untitled?node-id=1-72&m=dev&t=14WAC5rZtkGdNrcK-1",
+    text: "Production",
+    url: "https://contactdash.netlify.app",
   },
   {
-    text: "Back",
-    url: "https://github.com/mokat6/sales-tools",
+    text: "Figma",
+    url: "https://www.figma.com/design/FFE2IpYIgB8X1EzHPi2wMb/Untitled?node-id=1-72&m=dev&t=14WAC5rZtkGdNrcK-1",
   },
   {
     text: "REST API docs",
     url: "https://anybus.online:5001/swagger/index.html",
   },
   {
-    text: "Front",
-    url: "https://github.com/mokat6/sales-tools-front",
+    text: "Back",
+    url: "https://github.com/mokat6/sales-tools",
   },
 
   {
-    text: "Production",
-    url: "https://contactdash.netlify.app",
+    text: "Front",
+    url: "https://github.com/mokat6/sales-tools-front",
   },
 ];
 
-type WorkType = {
-  text: string;
-  url: string;
-};
-
 export const ExperienceCard = () => {
   return (
-    <div className="bg-white/20 flex w-full gap-10">
-      <div>2025</div>
-      <div className="flex gap-8">
-        <div className="flex flex-col">
-          <div>Sales dashboard</div>
-          <div className="flex gap-3">
-            {WORK.map(({ text, url }) => (
-              <Resource key={text} text={text} url={url} />
-            ))}
-          </div>
-          <div className="w-80 flex gap-3 pt-4">
-            <Tooltip message="Typescript">
-              <span className="bg-white rounded-xl">
+    <div className="flex flex-col gap-3">
+      <div className="font-bold text-2xl">2025 - Sales dashboard</div>
+      <div className="flex gap-3">
+        {WORK.map(({ text, url }) => (
+          <OutsideLink key={text} text={text} url={url} />
+        ))}
+      </div>
+
+      <div className=" flex w-full gap-10">
+        <div className="flex flex-col gap-5">
+          <div className="w-80 flex gap-3 pt-4   ">
+            <RenderTechLogo tooltip="Typescript">
+              <span className="bg-white rounded-xl ">
                 <SiTypescript size={32} color="#3178C6" />
               </span>
-            </Tooltip>
-            <Tooltip message="Tailwind CSS">
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="Tailwind CSS">
               <SiTailwindcss size={32} color="#06B6D4" />
-            </Tooltip>
-            <Tooltip message="Tanstack Table, Tanstack Query, Tanstack Virtual">
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="Tanstack Table, Tanstack Query, Tanstack Virtual">
               <Tanstack />
-            </Tooltip>
-            <Tooltip message="Radix primitives">
-              <Radix />
-            </Tooltip>
-            <Tooltip message="Vite">
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="Radix primitives">
+              <span className="text-white bg-black/60 dark:bg-black/20 pl-0.5 rounded">
+                <Radix />
+              </span>
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="Vite">
               <Vite />
-            </Tooltip>
-            <Tooltip message="React">
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="React">
               <span className="dark:text-[color:#61DAFB] text-sky-700">
                 <SiReact size={32} title="React" />
               </span>
-            </Tooltip>
-            <Tooltip message="Swagger / Open API">
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="Swagger / Open API">
               <span className="text-gray-700 bg-[color:#8bf62a]  rounded-full">
                 <SiSwagger size={32} />
               </span>
-            </Tooltip>
-            <Tooltip message="asp .NET core">
+            </RenderTechLogo>
+
+            <RenderTechLogo tooltip="asp .NET core">
               <Dotnet />
-            </Tooltip>
+            </RenderTechLogo>
           </div>
           <div className="w-80">
-            Features: Infinite scrolling, cursor based server side pagination, main table virtualized, front end uses
-            Swagger generated api sdk
+            <h2 className="text-xl font-bold">Features:</h2>
+            <ul>
+              <li>Infinite scrolling </li>
+              <li>Cursor based server side pagination </li>
+              <li>Main table virtualized</li>
+              <li>Front end uses Swagger generated api sdk</li>
+            </ul>
           </div>
         </div>
-        {/* <LottieAnim /> */}
-
         <LottieAnim />
       </div>
+
+      {/* <LottieAnim /> */}
     </div>
   );
 };
 
-const Resource = ({ text, url }: { text: string; url: string }) => {
+const OutsideLink = ({ text, url }: { text: string; url: string }) => {
   return (
-    <div>
-      <a href={url}>{text}</a>
+    <a
+      className="inline-block bg-primary text-white font-medium rounded-lg px-3 py-2 shadow-sm transition duration-300 
+        hover:bg-blue-600 hover:shadow-md hover:scale-[1.02]"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {text}
+    </a>
+  );
+};
+
+type RenderTechLogoProps = PropsWithChildren<{
+  tooltip: string;
+}>;
+
+const RenderTechLogo = ({ tooltip, children }: RenderTechLogoProps) => {
+  return (
+    <div
+      style={{ height: 32, width: 32 }}
+      className=" inline-flex min-w-8  grayscale hover:grayscale-0 transition duration-300"
+    >
+      <Tooltip message={tooltip}>{children}</Tooltip>
     </div>
   );
 };
