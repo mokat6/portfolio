@@ -4,11 +4,14 @@ import { ExperienceCard3 } from "@/components/ExperienceCard3";
 import { ExperienceCard4 } from "@/components/ExperienceCard4";
 import Image from "next/image";
 
+import { ctas, features, techStack } from "@/data/workExperience1";
+import { LottieAnim } from "@/components/LottieAnim";
+
 export default function Home() {
   return (
     <div className="font-sans  flex flex-col gap-10  min-h-screen p-8 pb-20 sm:p-20">
       <h1 className="text-4xl">My Exp</h1>
-      <ExperienceCard />
+      <ExperienceCard features={features} techstack={techStack} ctas={ctas} graphics={<LottieAnim />} />
       <ExperienceCard2 />
       <ExperienceCard3 />
       <ExperienceCard4 />

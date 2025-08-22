@@ -33,14 +33,15 @@ export function Vite() {
 
 //<img src="/logo.svg" alt="Logo" className="w-8 h-8" />
 
-export function Radix() {
+export function Radix({ className }: { className: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
       height={32}
       width={32}
+      className={`rounded ${className}`}
       style={{ paddingLeft: 7 }}
-      fill="currentColor"
+      fill="#fff"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path d="M7 23C3.13401 23 0 19.6422 0 15.5C0 11.3578 3.13401 8 7 8V23Z" />
