@@ -47,13 +47,20 @@ export const ExperienceCard3 = () => {
           </div>
           <div className="w-80 flex gap-3 pt-4">
             <Tooltip message="Javascript">
-              <SiJavascript size={32} color="#F7DF1E" />
+              <span className="text-amber-300 bg-black">
+                <SiJavascript size={32} />
+              </span>
             </Tooltip>
             <Tooltip message="Spring Boot - Libra">
-              <SiSpringboot size={32} color="#6db33f" />
+              <span className="relative">
+                <span style={{}} className="absolute w-5 h-5 left-1.5 top-1.5 rounded-full bg-white z-0" />
+                <SiSpringboot size={32} color="#6db33f" className="relative z-30" />
+              </span>
             </Tooltip>
             <Tooltip message="React via create-react-app">
-              <SiReact size={32} color="#61DAFB" title="React" />
+              <span className="dark:text-[color:#61DAFB] text-sky-700">
+                <SiReact size={32} title="React" />
+              </span>
             </Tooltip>
             <Tooltip message="Bootstrap">
               <Bootstrap />

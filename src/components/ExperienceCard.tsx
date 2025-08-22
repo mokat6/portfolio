@@ -48,7 +48,9 @@ export const ExperienceCard = () => {
           </div>
           <div className="w-80 flex gap-3 pt-4">
             <Tooltip message="Typescript">
-              <SiTypescript size={32} color="#3178C6" />
+              <span className="bg-white rounded-xl">
+                <SiTypescript size={32} color="#3178C6" />
+              </span>
             </Tooltip>
             <Tooltip message="Tailwind CSS">
               <SiTailwindcss size={32} color="#06B6D4" />
@@ -66,10 +68,12 @@ export const ExperienceCard = () => {
               <Vite />
             </Tooltip>
             <Tooltip message="React">
-              <SiReact size={32} color="#61DAFB" title="React" />
+              <span className="dark:text-[color:#61DAFB] text-sky-700">
+                <SiReact size={32} title="React" />
+              </span>
             </Tooltip>
             <Tooltip message="Swagger / Open API">
-              <span className="text-green-100 bg-amber-400 dark:text-green-900">
+              <span className="text-gray-700 bg-[color:#8bf62a]  rounded-full">
                 <SiSwagger size={32} />
               </span>
               {/* <SiSwagger size={32} className="text-green-400 dark:text-green-700" /> */}
