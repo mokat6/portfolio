@@ -3,7 +3,6 @@ import { SiReact } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "./Tooltip";
 import { SiSwagger } from "@icons-pack/react-simple-icons";
 import { Dotnet, Radix, Tanstack, Vite } from "@/lib/svgs";
-import { LottieAnim } from "./LottieAnim";
 import { PropsWithChildren } from "react";
 import { Cta, TechStackItem } from "@/data/workExperience1";
 
@@ -15,7 +14,6 @@ type ExperienceCardProps = {
 };
 
 export const ExperienceCard = ({ features, graphics, techstack, ctas }: ExperienceCardProps) => {
-  const gg = <LottieAnim />;
   return (
     <div className="flex flex-col gap-3">
       <div className="font-bold text-2xl">2025 - Sales dashboard</div>
@@ -24,7 +22,7 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas }: Experien
           <a
             key={idx}
             className="inline-block bg-primary text-white font-medium rounded-lg px-3 py-2 shadow-sm transition duration-300 
-             hover:bg-blue-600 hover:shadow-md hover:scale-[1.02]"
+             hover:bg-primary/80 hover:shadow-md hover:scale-[1.02]"
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -59,9 +57,8 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas }: Experien
             </ul>
           </div>
         </div>
-        {/* {graphics} */}
+        {graphics}
         {/* <LottieAnim /> */}
-        {gg}
       </div>
     </div>
   );

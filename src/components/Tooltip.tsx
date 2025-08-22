@@ -15,9 +15,9 @@ export const Tooltip = ({ children, message, contentClass }: TooltipProps) => {
         <TooltipEl.Trigger asChild>{children}</TooltipEl.Trigger>
         <TooltipEl.Portal>
           <TooltipEl.Content
-            className={`bg-gray-800 text-white px-2 py-1 rounded-md text-sm shadow-md ${contentClass}`}
-            side="top"
-            sideOffset={5}
+            className={`bg-text-body text-bg-background px-2 py-1 rounded-md text-sm shadow-md ${contentClass}`}
+            side="bottom"
+            sideOffset={2}
           >
             {message}
             <TooltipEl.Arrow className="fill-text-body" />

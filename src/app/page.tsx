@@ -2,7 +2,6 @@ import { ExperienceCard } from "@/components/ExperienceCard";
 import { ExperienceCard2 } from "@/components/ExperienceCard2";
 import { ExperienceCard3 } from "@/components/ExperienceCard3";
 import { ExperienceCard4 } from "@/components/ExperienceCard4";
-import Image from "next/image";
 
 import { ctas, features, techStack } from "@/data/workExperience1";
 import { LottieAnim } from "@/components/LottieAnim";

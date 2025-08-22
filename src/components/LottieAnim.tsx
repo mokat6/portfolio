@@ -10,18 +10,26 @@ export const LottieAnim = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const animRef = useRef<AnimationItem | null>(null);
   const { dark } = useDark();
-  const hasPlayedOnce = useRef(false);
-  const [mounted, setMounted] = useState(false);
+  const [hasPlayedOnce, setHasPlayedOnce] = useState(false);
+  // const [mounted, setMounted] = useState(false);
+  const [animationData, setAnimationData] = useState<any | null>(null);
 
-  useEffect(() => setMounted(true), []);
+  // useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    fetch("/lottieAnimGraph.json")
+      .then((res) => res.json())
+      .then(setAnimationData)
+      .catch(console.error);
+  }, []);
 
-    const newAnimData = animationData;
+  useEffect(() => {
+    if (!containerRef.current || !animationData) return;
+
+    const animDataCopy = JSON.parse(JSON.stringify(animationData));
     const strokeColor = dark ? [1, 1, 1, 1] : [0, 0, 0, 1];
-    if (newAnimData.layers[7]?.ef?.[0]?.ef?.[0].v.k) {
-      newAnimData.layers[7].ef[0].ef[0].v.k = strokeColor;
+    if (animDataCopy.layers[7]?.ef?.[0]?.ef?.[0].v.k) {
+      animDataCopy.layers[7].ef[0].ef[0].v.k = strokeColor;
     }
 
     if (animRef.current) animRef.current.destroy();
@@ -30,12 +38,12 @@ export const LottieAnim = () => {
       container: containerRef.current,
       renderer: "svg",
       loop: false,
-      autoplay: !hasPlayedOnce.current,
-      animationData: newAnimData,
+      autoplay: !hasPlayedOnce,
+      animationData: animDataCopy,
     });
 
-    if (!hasPlayedOnce.current) hasPlayedOnce.current = true;
-  }, [dark]);
+    if (!hasPlayedOnce) setHasPlayedOnce(true);
+  }, [dark, animationData]);
 
   const replay = () => {
     if (animRef.current && animRef.current.isPaused) {
@@ -48,9 +56,7 @@ export const LottieAnim = () => {
     <div className="relative w-64 h-64" onMouseEnter={replay}>
       {/* Placeholder */}
       <div
-        className={`absolute inset-0 transition-opacity duration-300 ${
-          hasPlayedOnce.current ? "opacity-0" : "opacity-100"
-        }`}
+        className={`absolute inset-0 transition-opacity duration-300 ${hasPlayedOnce ? "opacity-0" : "opacity-100"}`}
       >
         <LottiePlaceholder />
       </div>
@@ -58,7 +64,7 @@ export const LottieAnim = () => {
       {/* Actual Lottie animation */}
       <div
         ref={containerRef}
-        className={`absolute inset-0 transition-opacity duration-300 ${mounted ? "opacity-100" : "opacity-0"}`}
+        className={`absolute inset-0 transition-opacity duration-300 ${!!animationData ? "opacity-100" : "opacity-0"}`}
       />
     </div>
   );
