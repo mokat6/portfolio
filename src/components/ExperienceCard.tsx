@@ -1,16 +1,9 @@
-// import { LottieAnim } from "./LottieAnim";
 import { SiTypescript, SiTailwindcss } from "@icons-pack/react-simple-icons";
-// import Tanstack from "../../public/tech-stack/tanstack.png";
-// import Vite from "../../public/tech-stack/vite.svg";
-// import Radix from "../../public/tech-stack/radix.png";
-// import Dotnet from "../../public/tech-stack/NET_Core_Logo.svg";
-import Image from "next/image";
 import { SiReact } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "./Tooltip";
 import { SiSwagger } from "@icons-pack/react-simple-icons";
 import { Dotnet, Radix, Tanstack, Vite } from "@/lib/svgs";
-import { LottieAnim2 } from "./Lottie2";
-import { Suspense } from "react";
+import { LottieAnim } from "./LottieAnim";
 
 const WORK: WorkType[] = [
   {
@@ -44,7 +37,7 @@ type WorkType = {
 export const ExperienceCard = () => {
   return (
     <div className="bg-white/20 flex w-full gap-10">
-      <div>2015</div>
+      <div>2025</div>
       <div className="flex gap-8">
         <div className="flex flex-col">
           <div>Sales dashboard</div>
@@ -76,7 +69,10 @@ export const ExperienceCard = () => {
               <SiReact size={32} color="#61DAFB" title="React" />
             </Tooltip>
             <Tooltip message="Swagger / Open API">
-              <SiSwagger size={32} color="#85EA2D" title="Swagger" />
+              <span className="text-green-100 bg-amber-400 dark:text-green-900">
+                <SiSwagger size={32} />
+              </span>
+              {/* <SiSwagger size={32} className="text-green-400 dark:text-green-700" /> */}
             </Tooltip>
             <Tooltip message="asp .NET core">
               {/* <Image src={Dotnet} alt="Vite" width={32} height={32} /> */}
@@ -90,7 +86,7 @@ export const ExperienceCard = () => {
         </div>
         {/* <LottieAnim /> */}
 
-        <LottieAnim2 />
+        <LottieAnim />
       </div>
     </div>
   );

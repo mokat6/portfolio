@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Side } from "@/components/Side";
-import { ThemeProvider } from "@/context/theme/ThemeProvider";
+import { DarkProvider } from "@/context/theme/DarkProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,26 +26,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex container border-1 border-white mx-auto`}
       >
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                const stored = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const theme = stored || (prefersDark ? 'dark' : 'light');
-                document.documentElement.classList.remove('light', 'dark');
-                document.documentElement.classList.add(theme);
-              })();
-            `,
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.classList.remove('light','dark');
+        document.documentElement.classList.add(theme);
+      })();
+    `,
           }}
         />
-        <ThemeProvider>
+        <DarkProvider>
           <Side />
           {children}
-        </ThemeProvider>
+        </DarkProvider>
       </body>
     </html>
   );

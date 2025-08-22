@@ -42,7 +42,7 @@ export function Radix() {
       style={{ background: "#000", paddingLeft: 7 }}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      // className="w-8 h-8 text-blue-500"
+      className="text-white"
     >
       <path d="M7 23C3.13401 23 0 19.6422 0 15.5C0 11.3578 3.13401 8 7 8V23Z" />
       <path d="M7 0H0V7H7V0Z" />
@@ -360,24 +360,205 @@ export function Java() {
   );
 }
 
-export const LottiePlaceholder = () => {
-  return (
-    <svg
-      viewBox="0 0 540 531"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full " // <- use your theme class
-    >
-      <rect
-        x="322"
-        y="22"
-        width="188"
-        height="187"
-        fill="none"
-        stroke="currentColor" // <- use currentColor
-        strokeWidth="7"
-      />
-      <rect x="30" y="22" width="188" height="187" fill="none" stroke="currentColor" strokeWidth="7" />
-      <rect x="322" y="316" width="188" height="187" fill="none" stroke="currentColor" strokeWidth="7" />
-    </svg>
-  );
-};
+export const LottiePlaceholder = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 540 531"
+    width="507"
+    height="498"
+    preserveAspectRatio="xMidYMid meet"
+    style={{
+      width: "100%",
+      height: "100%",
+      transform: "translate3d(0px, 0px, 0px)",
+      contentVisibility: "visible",
+      filter: "blur(2px)",
+    }}
+  >
+    <defs>
+      <clipPath id="__lottie_element_2">
+        <rect width="540" height="531" x="0" y="0" />
+      </clipPath>
+      <clipPath id="__lottie_element_4">
+        <path d="M0,0 L600,0 L600,600 L0,600z" />
+      </clipPath>
+      <clipPath id="__lottie_element_11">
+        <path
+          fill="currentColor"
+          clipRule="nonzero"
+          d=" M-217.11500549316406,169.50900268554688 C-217.11500549316406,169.50900268554688 -217.38099670410156,207.00799560546875 -217.38099670410156,207.00799560546875 C-217.38099670410156,207.00799560546875 -59.63399887084961,208.1280059814453 -59.63399887084961,208.1280059814453 C-59.63399887084961,208.1280059814453 -59.36800003051758,170.62899780273438 -59.36800003051758,170.62899780273438 C-59.36800003051758,170.62899780273438 -217.11500549316406,169.50900268554688 -217.11500549316406,169.50900268554688"
+          fillOpacity="1"
+        />
+      </clipPath>
+      <clipPath id="__lottie_element_14">
+        <path
+          fill="currentColor"
+          clipRule="nonzero"
+          d=" M-217.11500549316406,169.50900268554688 C-217.11500549316406,169.50900268554688 -217.38099670410156,207.00799560546875 -217.38099670410156,207.00799560546875 C-217.38099670410156,207.00799560546875 -59.63399887084961,208.1280059814453 -59.63399887084961,208.1280059814453 C-59.63399887084961,208.1280059814453 -59.36800003051758,170.62899780273438 -59.36800003051758,170.62899780273438 C-59.36800003051758,170.62899780273438 -217.11500549316406,169.50900268554688 -217.11500549316406,169.50900268554688"
+          fillOpacity="1"
+        />
+      </clipPath>
+      <clipPath id="__lottie_element_17">
+        <path
+          fill="currentColor"
+          clipRule="nonzero"
+          d=" M-217.11500549316406,169.50900268554688 C-217.11500549316406,169.50900268554688 -217.38099670410156,207.00799560546875 -217.38099670410156,207.00799560546875 C-217.38099670410156,207.00799560546875 -59.63399887084961,208.1280059814453 -59.63399887084961,208.1280059814453 C-59.63399887084961,208.1280059814453 -59.36800003051758,170.62899780273438 -59.36800003051758,170.62899780273438 C-59.36800003051758,170.62899780273438 -217.11500549316406,169.50900268554688 -217.11500549316406,169.50900268554688"
+          fillOpacity="1"
+        />
+      </clipPath>
+    </defs>
+
+    <g clipPath="url(#__lottie_element_2)">
+      <g transform="matrix(1,0,0,1,305,303.5)" opacity={1} style={{ display: "block" }}>
+        <g opacity={1} transform="matrix(1,0,0,1,-197.25,-165.25)">
+          <g opacity={1} transform="matrix(1,0,0,1,300.5,-0.75)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M94.25,-93.25 C94.25,-93.25 94.25,93.25 94.25,93.25 C94.25,93.25 -94.25,93.25 -94.25,93.25 C-94.25,93.25 -94.25,-93.25 -94.25,-93.25 C-94.25,-93.25 94.25,-93.25 94.25,-93.25z"
+            />
+          </g>
+
+          <g opacity={1} transform="matrix(1,0,0,1,301.25,293.25)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M94.25,-93.25 C94.25,-93.25 94.25,93.25 94.25,93.25 C94.25,93.25 -94.25,93.25 -94.25,93.25 C-94.25,93.25 -94.25,-93.25 -94.25,-93.25 C-94.25,-93.25 94.25,-93.25 94.25,-93.25z"
+            />
+          </g>
+
+          <path
+            strokeLinecap="butt"
+            strokeLinejoin="miter"
+            fillOpacity={0}
+            strokeMiterlimit={4}
+            stroke="currentColor"
+            strokeOpacity={1}
+            strokeWidth={7}
+            d=" M94.25,-93.25 C94.25,-93.25 94.25,93.25 94.25,93.25 C94.25,93.25 -94.25,93.25 -94.25,93.25 C-94.25,93.25 -94.25,-93.25 -94.25,-93.25 C-94.25,-93.25 94.25,-93.25 94.25,-93.25z"
+          />
+        </g>
+      </g>
+
+      <g
+        clipPath="url(#__lottie_element_4)"
+        transform="matrix(1,0,0,1,-44,-41)"
+        opacity={1}
+        style={{ display: "block" }}
+      >
+        <g transform="matrix(1,0,0,1,314.625,300)" opacity={1} style={{ display: "block" }}>
+          <g opacity={1} transform="matrix(1,0,0,1,-139.25,100.25)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M0,-18.75 C38.21907424926758,-18.75 69.25,-10.348125457763672 69.25,0 C69.25,10.348125457763672 38.21907424926758,18.75 0,18.75 C-38.21907424926758,18.75 -69.25,10.348125457763672 -69.25,0 C-69.25,-10.348125457763672 -38.21907424926758,-18.75 0,-18.75z"
+            />
+          </g>
+        </g>
+
+        <g
+          clipPath="url(#__lottie_element_17)"
+          transform="matrix(1,0,0,1,315.375,275.75)"
+          opacity={1}
+          style={{ display: "block" }}
+        >
+          <g opacity={1} transform="matrix(1,0,0,1,-139.25,170.25)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M0,-18.75 C38.21907424926758,-18.75 69.25,-10.348125457763672 69.25,0 C69.25,10.348125457763672 38.21907424926758,18.75 0,18.75 C-38.21907424926758,18.75 -69.25,10.348125457763672 -69.25,0 C-69.25,-10.348125457763672 -38.21907424926758,-18.75 0,-18.75z"
+            />
+          </g>
+        </g>
+
+        <g
+          clipPath="url(#__lottie_element_14)"
+          transform="matrix(1,0,0,1,315.375,322)"
+          opacity={1}
+          style={{ display: "block" }}
+        >
+          <g opacity={1} transform="matrix(1,0,0,1,-139.25,170.25)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M0,-18.75 C38.21907424926758,-18.75 69.25,-10.348125457763672 69.25,0 C69.25,10.348125457763672 38.21907424926758,18.75 0,18.75 C-38.21907424926758,18.75 -69.25,10.348125457763672 -69.25,0 C-69.25,-10.348125457763672 -38.21907424926758,-18.75 0,-18.75z"
+            />
+          </g>
+        </g>
+
+        <g
+          clipPath="url(#__lottie_element_11)"
+          transform="matrix(1,0,0,1,315.375,366)"
+          opacity={1}
+          style={{ display: "block" }}
+        >
+          <g opacity={1} transform="matrix(1,0,0,1,-139.25,170.25)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M0,-18.75 C38.21907424926758,-18.75 69.25,-10.348125457763672 69.25,0 C69.25,10.348125457763672 38.21907424926758,18.75 0,18.75 C-38.21907424926758,18.75 -69.25,10.348125457763672 -69.25,0 C-69.25,-10.348125457763672 -38.21907424926758,-18.75 0,-18.75z"
+            />
+          </g>
+        </g>
+
+        <g transform="matrix(1,0,0,1,314.625,300)" opacity={1} style={{ display: "block" }}>
+          <g opacity={1} transform="matrix(1,0,0,1,0,0)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M-208.25,99.375 C-208.25,99.375 -208.25,238.125 -208.25,238.125"
+            />
+          </g>
+          <g opacity={1} transform="matrix(1,0,0,1,0,0)">
+            <path
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              fillOpacity={0}
+              strokeMiterlimit={4}
+              stroke="currentColor"
+              strokeOpacity={1}
+              strokeWidth={7}
+              d=" M-69.5,100.5 C-69.5,100.5 -69.5,239.375 -69.5,239.375"
+            />
+          </g>
+        </g>
+      </g>
+    </g>
+  </svg>
+);

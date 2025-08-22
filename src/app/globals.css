@@ -30,5 +30,7 @@
 body {
   background: var(--color-bg-background);
   color: var(--color-text-body);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), "Inter", Arial, Helvetica, sans-serif;
+  line-height: 1.5; /* optional: match Geist metrics */
+  letter-spacing: 0.01em; /* optional */
 }
