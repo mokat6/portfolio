@@ -1,22 +1,18 @@
-import { SiTypescript, SiTailwindcss } from "@icons-pack/react-simple-icons";
-import { SiReact } from "@icons-pack/react-simple-icons";
 import { Tooltip } from "./Tooltip";
-import { SiSwagger } from "@icons-pack/react-simple-icons";
-import { Dotnet, Radix, Tanstack, Vite } from "@/lib/svgs";
-import { PropsWithChildren } from "react";
 import { Cta, TechStackItem } from "@/data/workExperience1";
 
 type ExperienceCardProps = {
+  title: string;
   ctas: Cta[];
   features: string[];
   techstack: TechStackItem[];
-  graphics: React.ReactNode;
+  graphics?: React.ReactNode;
 };
 
-export const ExperienceCard = ({ features, graphics, techstack, ctas }: ExperienceCardProps) => {
+export const ExperienceCard = ({ features, graphics, techstack, ctas, title }: ExperienceCardProps) => {
   return (
     <div className="flex flex-col gap-3">
-      <div className="font-bold text-2xl">2025 - Sales dashboard</div>
+      <div className="font-bold text-2xl">{title}</div>
       <div className="flex gap-3">
         {ctas.map(({ text, url }, idx) => (
           <a
@@ -34,7 +30,7 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas }: Experien
 
       <div className=" flex w-full gap-10">
         <div className="flex flex-col gap-5">
-          <div className="w-80 flex gap-3 pt-4   ">
+          <div className=" flex gap-3 pt-4   ">
             {techstack.map(({ id, logo, tooltip }) => {
               return (
                 <div
@@ -48,7 +44,7 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas }: Experien
             })}
           </div>
 
-          <div className="w-80">
+          <div className="">
             <h2 className="text-xl font-bold">Features:</h2>
             <ul>
               {features.map((feature, idx) => (
@@ -58,7 +54,6 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas }: Experien
           </div>
         </div>
         {graphics}
-        {/* <LottieAnim /> */}
       </div>
     </div>
   );
