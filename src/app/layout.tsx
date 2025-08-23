@@ -27,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head></head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex items-start container border-1 border-white mx-auto`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex items-start container  mx-auto`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `

@@ -4,7 +4,7 @@ import { SwitchMoon } from "./SwitchMoon";
 
 export const Side = () => {
   return (
-    <div className="bg-white/40 p-10 flex flex-col items-center sticky top-0">
+    <div className="bg-bg-side p-10 flex flex-col items-center sticky top-0 rounded shadow-xl">
       <div className="flex flex-col gap-5">
         <Image
           id="userPhoto"
