@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SwitchMoon } from "./SwitchMoon";
+import clsx from "clsx";
 
-export const Side = () => {
+export const Side = ({ className = "" }: { className?: string }) => {
   return (
-    <div className="bg-bg-side p-10 flex flex-col items-center sticky top-0 rounded shadow-xl">
+    <div className={clsx("bg-bg-side p-10 flex flex-col items-center  rounded shadow-xl", className)}>
       <div className="flex flex-col gap-5">
         <Image
           id="userPhoto"

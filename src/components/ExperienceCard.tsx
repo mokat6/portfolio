@@ -11,9 +11,9 @@ type ExperienceCardProps = {
 
 export const ExperienceCard = ({ features, graphics, techstack, ctas, title }: ExperienceCardProps) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 border">
       <div className="font-bold text-2xl">{title}</div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 flex-wrap">
         {ctas.map(({ text, url }, idx) => (
           <a
             key={idx}
@@ -28,9 +28,9 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas, title }: E
         ))}
       </div>
 
-      <div className=" flex w-full gap-10">
+      <div className="flex md:flex-row flex-col w-full gap-10">
         <div className="flex flex-col gap-5">
-          <div className=" flex gap-3 pt-4   ">
+          <div className=" flex flex-wrap gap-3 pt-4   ">
             {techstack.map(({ id, logo, tooltip }) => {
               return (
                 <div

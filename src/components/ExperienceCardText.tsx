@@ -6,7 +6,7 @@ type ExperienceCardTextProps = {
 
 export const ExperienceCardText = ({ bullets, title, date }: ExperienceCardTextProps) => {
   return (
-    <div className=" flex gap-8 ">
+    <div className=" flex gap-8 border">
       <div className="flex flex-col">
         <div className="font-bold text-2xl">{title}</div>
         <div className="">{date}</div>

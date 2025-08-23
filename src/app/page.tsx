@@ -5,10 +5,11 @@ import * as exp1 from "@/data/workExperience1";
 import * as exp3 from "@/data/workExperience3";
 import { LottieAnim } from "@/components/LottieAnim";
 import { expBullets1, expBullets2 } from "@/data/workExperienceText";
+import clsx from "clsx";
 
 export default function Home() {
   return (
-    <div className="font-sans  flex flex-col gap-15  min-h-screen p-8 pb-20 sm:p-20">
+    <div className={clsx("font-sans")}>
       <h1 className="text-4xl">My Experience</h1>
       <ExperienceCard
         title="2025 - Sales dashboard"

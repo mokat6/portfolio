@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Side } from "@/components/Side";
 import { DarkProvider } from "@/context/theme/DarkProvider";
+import clsx from "clsx";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // grid grid-cols-1 md:grid-cols-[16rem_1fr]
     <html lang="en" suppressHydrationWarning>
       <head></head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex items-start container  mx-auto`}>
+      <body
+        className={clsx(
+          geistSans.variable,
+          geistMono.variable,
+          "antialiased",
+          "grid grid-cols-1 md:grid-cols-[16rem_1fr] max-w-5xl mx-auto"
+        )}
+      >
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -42,8 +51,8 @@ export default function RootLayout({
           }}
         />
         <DarkProvider>
-          <Side />
-          {children}
+          <Side className="top-0 md:sticky md:self-start" />
+          <div className={clsx("flex flex-col gap-15 min-h-screen", "p-4 lg:p-20 md:p-10 border")}>{children}</div>
         </DarkProvider>
       </body>
     </html>

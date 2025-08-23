@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import lottie, { AnimationItem } from "lottie-web";
-import animationData from "@/assets/lottieAnimGraph.json";
+// import animationData from "@/assets/lottieAnimGraph.json";
 import { useDark } from "@/context/theme/dark-context";
 import { LottiePlaceholder } from "@/lib/svgs";
 
@@ -53,7 +53,7 @@ export const LottieAnim = () => {
   };
 
   return (
-    <div className="relative w-64 h-64" onMouseEnter={replay}>
+    <div className="relative w-64 h-64 max-w-full" onMouseEnter={replay}>
       {/* Placeholder */}
       <div
         className={`absolute inset-0 transition-opacity duration-300 ${hasPlayedOnce ? "opacity-0" : "opacity-100"}`}
