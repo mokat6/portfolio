@@ -10,15 +10,16 @@ type ExperienceCardProps = {
 };
 
 export const ExperienceCard = ({ features, graphics, techstack, ctas, title }: ExperienceCardProps) => {
+  console.log("experience card rendering, title> ", title);
   return (
-    <div className="flex flex-col gap-3 border">
+    <div className="flex flex-col gap-3">
       <div className="font-bold text-2xl">{title}</div>
       <div className="flex gap-3 flex-wrap">
         {ctas.map(({ text, url }, idx) => (
           <a
             key={idx}
             className="inline-block bg-primary text-white font-medium rounded-lg px-3 py-2 shadow-sm transition duration-300 
-             hover:bg-primary/80 hover:shadow-md hover:scale-[1.02]"
+             hover:bg-primary/80 hover:shadow-md "
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -34,7 +35,7 @@ export const ExperienceCard = ({ features, graphics, techstack, ctas, title }: E
             {techstack.map(({ id, logo, tooltip }) => {
               return (
                 <div
-                  key={id}
+                  key={id + 4335} // nasty bug. This id and ctas item key must be unique
                   style={{ height: 32, width: 32 }}
                   className=" inline-flex min-w-8  grayscale hover:grayscale-0 transition duration-300"
                 >

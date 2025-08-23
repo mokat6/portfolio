@@ -5,31 +5,30 @@ import clsx from "clsx";
 
 export const Side = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={clsx("bg-bg-side p-10 flex flex-col items-center  rounded shadow-xl", className)}>
+    <div className={clsx("bg-bg-side p-10 flex flex-col items-center gap-5 rounded shadow-xl", className)}>
+      <Image
+        id="userPhoto"
+        src="/image/profile-pic.jpg"
+        alt="User Photo"
+        width={140}
+        height={140}
+        className="rounded-full"
+      />
+      <p className="text-xl text-nowrap">{`<Modestas.Katinas />`}</p>
       <div className="flex flex-col gap-5">
-        <Image
-          id="userPhoto"
-          src="/image/profile-pic.jpg"
-          alt="User Photo"
-          width={140}
-          height={140}
-          className="rounded-full"
-        />
-        <p className="text-xl text-nowrap">{`<Stilla.Gorilla />`}</p>
-
-        <div className="flex items-center">
-          <FaLinkedin className="text-4xl" />
+        <div className="flex items-center gap-2">
+          <FaLinkedin className="text-4xl " />
           <a href="https://www.linkedin.com/in/10c/" target="_blank">
             @l0c
           </a>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <FaGithub className="text-4xl" />
           <a href="https://github.com/mokat6" target="_blank">
             @mokat6
           </a>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <FaGithub className="text-4xl" />
           <a href="https://github.com/FTmiles" target="_blank">
             @FTmiles

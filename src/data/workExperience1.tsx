@@ -48,7 +48,7 @@ export type TechStackItem = {
 
 export const techStack: TechStackItem[] = [
   {
-    id: 0,
+    id: 4343,
     tooltip: "Typescript",
     logo: <SiTypescript size={32} className="rounded bg-white" color="#3178C6" />,
   },
@@ -65,10 +65,10 @@ export const techStack: TechStackItem[] = [
   {
     id: 3,
     tooltip: "Radix primitives",
-    logo: <Radix className="bg-black/60 dark:bg-black/20" />,
+    logo: <Radix className="bg-black/60 dark:bg-black/20 hover:bg-black" />,
   },
   {
-    id: 4,
+    id: 423,
     tooltip: "Vite",
     logo: <Vite />,
   },

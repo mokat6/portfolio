@@ -34,7 +34,7 @@ export default function RootLayout({
           geistSans.variable,
           geistMono.variable,
           "antialiased",
-          "grid grid-cols-1 md:grid-cols-[16rem_1fr] max-w-5xl mx-auto"
+          "grid grid-cols-1 md:grid-cols-[16rem_1fr] max-w-6xl mx-auto"
         )}
       >
         <script
@@ -52,7 +52,7 @@ export default function RootLayout({
         />
         <DarkProvider>
           <Side className="top-0 md:sticky md:self-start" />
-          <div className={clsx("flex flex-col gap-15 min-h-screen", "p-4 lg:p-20 md:p-10 border")}>{children}</div>
+          <div className={clsx("min-h-screen", "p-4 lg:p-20 md:p-10")}>{children}</div>
         </DarkProvider>
       </body>
     </html>

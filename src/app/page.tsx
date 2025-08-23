@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 export default function Home() {
   return (
-    <div className={clsx("font-sans")}>
+    <div className={clsx("font-sans flex flex-col gap-16")}>
       <h1 className="text-4xl">My Experience</h1>
       <ExperienceCard
         title="2025 - Sales dashboard"
