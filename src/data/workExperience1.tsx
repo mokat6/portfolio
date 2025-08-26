@@ -48,9 +48,23 @@ export type TechStackItem = {
 
 export const techStack: TechStackItem[] = [
   {
-    id: 4343,
+    id: 0,
     tooltip: "Typescript",
     logo: <SiTypescript size={32} className="rounded bg-white" color="#3178C6" />,
+  },
+  {
+    id: 4,
+    tooltip: "Vite",
+    logo: <Vite />,
+  },
+  {
+    id: 5,
+    tooltip: "React",
+    logo: (
+      <span className="dark:text-[color:#61DAFB] text-sky-700">
+        <SiReact size={32} title="React" />
+      </span>
+    ),
   },
   {
     id: 1,
@@ -67,20 +81,7 @@ export const techStack: TechStackItem[] = [
     tooltip: "Radix primitives",
     logo: <Radix className="bg-black/60 dark:bg-black/20 hover:bg-black" />,
   },
-  {
-    id: 423,
-    tooltip: "Vite",
-    logo: <Vite />,
-  },
-  {
-    id: 5,
-    tooltip: "React",
-    logo: (
-      <span className="dark:text-[color:#61DAFB] text-sky-700">
-        <SiReact size={32} title="React" />
-      </span>
-    ),
-  },
+
   {
     id: 6,
     tooltip: "Swagger / Open API",

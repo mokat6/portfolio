@@ -1,11 +1,24 @@
 export const expBullets1 = [
-  "React Native",
-  "RN UI lib",
-  "Redux",
-  "Jest, Detox",
-  "Figma",
-  "Jira",
-  "Wrote tons of tests using Detox, and React Native testing library",
+  "Worked on React Native application",
+  "Weekly standups",
+  "Reviewed colleague's Github PRs",
+  "Closed Jira tasks",
+  "Implemented components from Figma designs",
+  "Worked with tools like Redux, RN UI lib",
+  "Wrote many tests using Detox, React Native Testing Library",
+  "Attended leveling up workshops for interns",
 ];
 
-export const expBullets2 = ["OOP", "Basics", "MySQL", "Spring Boot", "Graduated with top marks 10/10"];
+export const expBullets2 = [
+  "Java core",
+  "Stream API",
+  "JAVA Swing",
+  "OOP principles",
+  "Git",
+  "Maven",
+  "SQL syntax, MySQL",
+  "Spring MVC, Thymeleaf",
+  "ORM (Hibernate)",
+  "REST API",
+  "Graduated with top grades 10/10",
+];

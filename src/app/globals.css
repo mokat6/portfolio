@@ -6,14 +6,14 @@
 
   --color-text-body: #0d0d0d;
   --color-bg-background: #f6f6f6;
-  --color-primary: #2e2eae;
+  --color-primary: #266c7a;
   --color-bg-side: #e4e4ea;
 }
 
 .dark {
   --color-text-body: #f6f6f6;
   --color-bg-background: #0d0d0d;
-  --color-primary: #4a4aa1;
+  --color-primary: #265862;
   --color-bg-side: #121212;
 }
 
