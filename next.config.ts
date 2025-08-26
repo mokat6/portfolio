@@ -7,11 +7,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactStrictMode: false,
-  // --
-  // for github pages
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio/",
-  // --
 };
 
 export default nextConfig;
